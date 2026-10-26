@@ -1,0 +1,17 @@
+# edu-code-camp
+
+> A free, offline learning app for beginners: short lessons in JavaScript, Python, SQL and the Linux command line, checked by hidden tests in the browser, with XP, streaks, badges and a local AI tutor called Spot. MIT licence, no account, no server.
+
+- [The app](https://gitguy268.github.io/edu-code-camp/)
+- [Source code and README](https://github.com/Gitguy268/edu-code-camp)
+- [How lessons are written](https://github.com/Gitguy268/edu-code-camp/blob/main/content/README.md)
+- [Third-party notices](https://gitguy268.github.io/edu-code-camp/NOTICE.txt)
+
+## Tracks
+
+- JavaScript basics: values, variables, functions, conditions, loops, arrays, objects, sorting (8 lessons)
+- Python basics: print, f-strings, functions, if/elif, lists, strings, dictionaries, while loops (8 lessons)
+- SQL basics: SELECT, WHERE, ORDER BY, GROUP BY, JOIN, INSERT and UPDATE on SQLite (6 lessons)
+- Linux command line: pwd, ls, cd, mkdir, rm, echo, cat, cp, mv, grep, pipes, scripts (6 lessons, real Alpine Linux in v86)
+- Project: camp to-do list in Python (5 steps)
+- Project: shell scavenger hunt (4 steps)

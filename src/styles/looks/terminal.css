@@ -1,0 +1,72 @@
+/* Terminal, after the Gitguy268 shell view and TabShell: phosphor text on near-black, square corners.
+   Tints: mint (default), amber, crt (green with scanlines). */
+[data-look="terminal"] body { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
+[data-look="terminal"] {
+  --page-text: var(--phos);
+  --phos: #a8dfb9;
+  --phos-dim: #7fb592;
+  --phos-hot: #5fd68a;
+  --font-ui: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --font-display: "JetBrains Mono", ui-monospace, monospace;
+  --bg: #0b100e;
+  --surface: #101614;
+  --surface-2: #16201c;
+  --text: var(--phos);
+  --muted: var(--phos-dim);
+  --border: color-mix(in srgb, var(--phos) 30%, transparent);
+  --accent: var(--phos-hot);
+  --on-accent: #08110c;
+  --ok: var(--phos-hot);
+  --bad: #ff7b72;
+  --radius: 0;
+  --radius-sm: 0;
+  --shadow: none;
+  --title-case: none;
+  --title-spacing: 0;
+  --title-font: 700 0.85rem "JetBrains Mono", monospace;
+  --btn-bg: transparent;
+  --btn-text: var(--phos);
+  --btn-border: 1px solid var(--phos);
+  --btn-font: 700 0.88rem "JetBrains Mono", monospace;
+  --primary-bg: var(--phos-hot);
+  --field-bg: #0b100e;
+  --chip-bg: transparent;
+  --chip-text: var(--phos);
+  --code-bg: #0b100e;
+  --code-text: var(--phos);
+  --code-gutter: var(--phos-dim);
+  --tok-kw: #ffd479;
+  --tok-str: #c3f08a;
+  --tok-num: #ffb3e6;
+  --tok-com: #6f8f7c;
+  --tok-fn: #8be9fd;
+  --tok-def: #e6fff0;
+  --selection: color-mix(in srgb, var(--phos) 30%, transparent);
+  --track-bg: #16201c;
+  --bar-fill: var(--phos-hot);
+  --flame: #ffb454;
+  --gem: #8be9fd;
+  --star: #ffd479;
+  --medal: var(--phos-hot);
+  --inline-code-bg: #16201c;
+}
+[data-look="terminal"][data-tint="amber"] { --phos: #ffc66d; --phos-dim: #c9984f; --phos-hot: #ffb000; --bg: #110c05; --surface: #161007; --surface-2: #21180b; --on-accent: #1a1000; }
+[data-look="terminal"][data-tint="crt"] { --phos: #8cff9e; --phos-dim: #5fc472; --phos-hot: #33ff66; --bg: #050b06; --surface: #07110a; --surface-2: #0c1a10; }
+[data-look="terminal"] .titlebar::before { content: "┌─ "; color: var(--muted); }
+[data-look="terminal"] .titlebar .title-text::after { content: " ─┐"; color: var(--muted); }
+[data-look="terminal"] .window { border: 1px solid var(--border); }
+[data-look="terminal"] h1::before { content: "$ "; color: var(--phos-hot); }
+[data-look="terminal"] .stat { border: 1px solid var(--border); }
+[data-look="terminal"] .nav a[aria-current="page"] { background: var(--phos); color: var(--bg); }
+[data-look="terminal"] .path .node { border-radius: 0; }
+[data-look="terminal"] .path .done .node, [data-look="terminal"] .btn.ok { color: var(--on-accent); }
+[data-look="terminal"] .track-icon { border-radius: 0; }
+[data-look="terminal"] .badge .medal { border-radius: 0; }
+[data-look="terminal"] .badge.got .medal { color: var(--on-accent); }
+[data-look="terminal"] .avatar { border-radius: 0; }
+[data-look="terminal"] ::selection { background: var(--phos); color: var(--bg); }
+[data-look="terminal"][data-tint="crt"] body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.22) 0 1px, transparent 1px 3px);
+}
+[data-look="terminal"][data-tint="crt"] body { text-shadow: 0 0 6px color-mix(in srgb, var(--phos) 45%, transparent); }

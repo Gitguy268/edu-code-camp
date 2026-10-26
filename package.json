@@ -1,0 +1,57 @@
+{
+  "name": "edu-code-camp",
+  "version": "0.1.0",
+  "description": "Learn to code by doing: lessons, hidden tests, XP and a local AI tutor. Runs offline in your browser.",
+  "private": true,
+  "type": "module",
+  "author": "Lucas Van De Weerd",
+  "license": "MIT",
+  "scripts": {
+    "predev": "node scripts/vendor.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/vendor.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "image": "./scripts/build-image.sh",
+    "lint": "eslint .",
+    "selfcheck": "node scripts/selfcheck.mjs",
+    "check": "npm run lint && npm run build && npm run selfcheck",
+    "test:unit": "node --test tests/unit/",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:e2e",
+    "screenshots": "node scripts/screenshots.mjs"
+  },
+  "dependencies": {
+    "@codemirror/commands": "6.11.1",
+    "@codemirror/lang-javascript": "6.2.5",
+    "@codemirror/lang-python": "6.2.1",
+    "@codemirror/lang-sql": "6.10.0",
+    "@codemirror/language": "6.13.1",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.15",
+    "@lezer/highlight": "1.2.5",
+    "@xterm/addon-fit": "0.11.0",
+    "@xterm/xterm": "6.0.0",
+    "codemirror": "6.0.2",
+    "marked": "18.1.1",
+    "pyodide": "314.0.7",
+    "sql.js": "1.15.1",
+    "v86": "0.5.463"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@fontsource/atkinson-hyperlegible-next": "5.3.0",
+    "@fontsource/fraunces": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/lilita-one": "5.3.0",
+    "@fontsource/press-start-2p": "5.3.0",
+    "@playwright/test": "1.62.1",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "vite": "8.3.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

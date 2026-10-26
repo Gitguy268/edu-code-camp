@@ -1,0 +1,1 @@
+{ "title": "SQL basics", "lang": "sql", "order": 3, "kind": "course", "description": "Ask a database questions with SELECT, WHERE, ORDER BY, GROUP BY and JOIN, on a real SQLite." }

@@ -1,0 +1,64 @@
+/* Editorial paper: a printed page with hairline rules, a serif masthead and one red accent. */
+[data-look="paper"] {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --bg: #f3f1ea;
+  --surface: #f3f1ea;
+  --surface-2: #e8e5da;
+  --text: #1c1b19;
+  --muted: #55524b;
+  --border: #1c1b19;
+  --accent: #c4122f;
+  --on-accent: #fff;
+  --link: #a30f27;
+  --ok: #1f6b35;
+  --bad: #a30f27;
+  --radius: 0;
+  --radius-sm: 0;
+  --shadow: none;
+  --win-border: 0;
+  --title-text: #c4122f;
+  --title-font: 700 0.72rem "Atkinson Hyperlegible Next", sans-serif;
+  --title-spacing: 0.16em;
+  --title-pad: 12px 0 0;
+  --body-pad: 10px 0 16px;
+  --btn-bg: transparent;
+  --btn-border: 1px solid #1c1b19;
+  --btn-radius: 0;
+  --primary-bg: #1c1b19;
+  --primary-border: 1px solid #1c1b19;
+  --field-bg: #fbfaf6;
+  --chip-bg: transparent;
+  --chip-text: #1c1b19;
+  --code-bg: #1c1b19;
+  --code-text: #f3f1ea;
+  --tok-kw: #ff8fa0;
+  --tok-str: #f2d58c;
+  --tok-num: #b9d4ff;
+  --tok-com: #a8a396;
+  --tok-fn: #a6e3b8;
+  --track-bg: #e0dccf;
+  --bar: 4px;
+  --bar-fill: #c4122f;
+  --topbar-bg: #f3f1ea;
+  --nav-active-bg: transparent;
+  --flame: #c4122f;
+  --gem: #1c1b19;
+  --star: #1c1b19;
+  --medal: #c4122f;
+  --gap: 24px;
+}
+[data-look="paper"] .window { border-top: 2px solid #1c1b19; }
+[data-look="paper"] .topbar { border-bottom: 3px double #1c1b19; padding: 14px 24px; }
+[data-look="paper"] .brand { font: italic 700 1.5rem "Fraunces", Georgia, serif; }
+[data-look="paper"] .nav a[aria-current="page"] { text-decoration: underline 2px #c4122f; text-underline-offset: 6px; }
+[data-look="paper"] h1 { font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: -0.01em; }
+[data-look="paper"] .stat { border: 1px solid #1c1b19; border-radius: 0; }
+[data-look="paper"] .pill { border: 1px solid currentColor; border-radius: 0; }
+[data-look="paper"] .track-icon { background: transparent; color: #c4122f; border: 1px solid #c4122f; border-radius: 0; font-family: "Fraunces", serif; font-size: 1.1rem; }
+[data-look="paper"] .path .node { border-radius: 0; font-family: "Fraunces", serif; }
+[data-look="paper"] .path a, [data-look="paper"] .path .locked { border-bottom: 1px solid #c9c4b6; border-radius: 0; }
+[data-look="paper"] .badge.got .medal { color: #fff; border-color: #c4122f; }
+[data-look="paper"] .prose { font-size: 1.05rem; }
+[data-look="paper"] .prose > p:first-of-type::first-letter { font: 700 3.1em/0.8 "Fraunces", serif; float: left; margin: 0.06em 0.08em 0 0; color: #c4122f; }
+[data-look="paper"] dialog .window { background: #f3f1ea; padding: 0 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); }

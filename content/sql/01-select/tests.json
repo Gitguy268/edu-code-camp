@@ -1,0 +1,3 @@
+[
+  { "name": "returns the name and cabin columns", "columns": ["name", "cabin"], "rows": [["Ada","Pine"],["Grace","Oak"],["Linus","Pine"],["Margaret","Birch"],["Alan","Oak"],["Barbara","Birch"],["Dennis","Pine"],["Radia","Oak"]], "hint": "Select name and cabin, in that order, from campers" }
+]

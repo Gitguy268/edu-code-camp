@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Katherine is in Birch",
+    "query": "SELECT name, age, cabin FROM campers WHERE name = 'Katherine'",
+    "rows": [
+      [
+        "Katherine",
+        12,
+        "Birch"
+      ]
+    ],
+    "hint": "INSERT INTO campers (name, age, cabin) VALUES (...)"
+  },
+  {
+    "name": "Alan sleeps in Pine",
+    "query": "SELECT cabin FROM campers WHERE name = 'Alan'",
+    "rows": [
+      [
+        "Pine"
+      ]
+    ],
+    "hint": "UPDATE campers SET cabin = 'Pine' WHERE name = 'Alan'"
+  },
+  {
+    "name": "nobody else moved",
+    "query": "SELECT cabin, COUNT(*) FROM campers GROUP BY cabin",
+    "rows": [
+      [
+        "Birch",
+        3
+      ],
+      [
+        "Oak",
+        2
+      ],
+      [
+        "Pine",
+        4
+      ]
+    ],
+    "hint": "Your UPDATE changed more than Alan's row. Did you forget WHERE?"
+  }
+]

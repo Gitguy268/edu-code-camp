@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-look="win98">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>edu-code-camp</title>
+    <meta name="description" content="Learn JavaScript, Python, SQL and the Linux command line by writing real code. Hidden tests, XP, streaks and a local AI tutor, all offline in your browser." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      // Pick the saved look before the first paint.
+      try { const l = localStorage.getItem("ecc-look"); if (l) document.documentElement.dataset.look = l; } catch {}
+    </script>
+  </head>
+  <body>
+    <noscript>edu-code-camp needs JavaScript.</noscript>
+    <div id="app" aria-live="polite"></div>
+    <div id="file-warning" hidden>
+      <div class="window" role="alert">
+        <div class="titlebar"><span>edu-code-camp</span></div>
+        <div class="window-body">
+          <h1>Open edu-code-camp with start.command</h1>
+          <p>Browsers block the code runners and the Linux VM on pages opened straight from a file.</p>
+          <p>Double-click <code>start.command</code> in this folder instead. It starts a small local server and opens the app.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      if (location.protocol === "file:") {
+        document.getElementById("file-warning").hidden = false;
+        document.getElementById("app").hidden = true;
+      }
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

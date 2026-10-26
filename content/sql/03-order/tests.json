@@ -1,0 +1,25 @@
+[
+  {
+    "name": "the three oldest, in order",
+    "columns": [
+      "name",
+      "age"
+    ],
+    "rows": [
+      [
+        "Barbara",
+        13
+      ],
+      [
+        "Linus",
+        13
+      ],
+      [
+        "Ada",
+        12
+      ]
+    ],
+    "ordered": true,
+    "hint": "ORDER BY age DESC, name, then LIMIT 3"
+  }
+]

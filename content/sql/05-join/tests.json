@@ -1,0 +1,49 @@
+[
+  {
+    "name": "every signup with names",
+    "columns": [
+      "name",
+      "title"
+    ],
+    "ordered": true,
+    "rows": [
+      [
+        "Ada",
+        "Canoeing"
+      ],
+      [
+        "Ada",
+        "Stargazing"
+      ],
+      [
+        "Alan",
+        "Stargazing"
+      ],
+      [
+        "Barbara",
+        "Archery"
+      ],
+      [
+        "Grace",
+        "Archery"
+      ],
+      [
+        "Linus",
+        "Canoeing"
+      ],
+      [
+        "Margaret",
+        "Pottery"
+      ],
+      [
+        "Radia",
+        "Canoeing"
+      ],
+      [
+        "Radia",
+        "Pottery"
+      ]
+    ],
+    "hint": "Join campers and activities to signups, then ORDER BY name, title"
+  }
+]

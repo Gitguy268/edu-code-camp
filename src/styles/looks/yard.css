@@ -1,0 +1,70 @@
+/* Spot's yard, after spot-snake and spot-light: lawn, fence and Spot's red collar, chunky cartoon outlines. */
+[data-look="yard"] {
+  --page-label-bg: #fff8ec;
+  --page-label-pad: 2px 14px;
+  --font-display: "Lilita One", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-ui: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --ink: #2b2118;
+  --bg: #6dbb4f;
+  --bg-image:
+    linear-gradient(180deg, #9fd8f5 0, #c8ecfa 150px, transparent 150px),
+    repeating-linear-gradient(90deg, #8a5a34 0 22px, #a06b40 22px 26px, transparent 26px 34px),
+    repeating-linear-gradient(100deg, #63b046 0 6px, #6dbb4f 6px 14px);
+  --bg-size: 100% 100%, 100% 70px, 100% 100%;
+  --bg-position: 0 0, 0 110px, 0 0;
+  --bg-repeat: no-repeat, no-repeat, repeat;
+  --surface: #fff8ec;
+  --surface-2: #f4e7cf;
+  --text: var(--ink);
+  --muted: #5e4a38;
+  --border: var(--ink);
+  --accent: #d8342f;
+  --on-accent: #fff;
+  --link: #a6211d;
+  --ok: #2f7d1e;
+  --bad: #b3261e;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --win-border: 3px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --title-font: 400 1.05rem "Lilita One", sans-serif;
+  --title-case: none;
+  --title-spacing: 0.01em;
+  --title-text: #8a5a34;
+  --btn-font: 400 1.02rem "Lilita One", sans-serif;
+  --btn-bg: #fff8ec;
+  --btn-border: 3px solid var(--ink);
+  --btn-radius: 999px;
+  --btn-shadow: 3px 3px 0 var(--ink);
+  --btn-shadow-active: none;
+  --btn-press: translate(3px, 3px);
+  --primary-bg: #d8342f;
+  --primary-border: 3px solid var(--ink);
+  --field-border: 3px solid var(--ink);
+  --chip-bg: #fff8ec;
+  --chip-text: var(--ink);
+  --code-bg: #17131f;
+  --code-text: #f5ecdf;
+  --tok-kw: #ff8f6b;
+  --tok-str: #ffd76b;
+  --tok-num: #9fd8f5;
+  --tok-com: #a99c8f;
+  --tok-fn: #9be36f;
+  --track-bg: #f4e7cf;
+  --bar: 12px;
+  --bar-fill: #d8342f;
+  --topbar-bg: #fff8ec;
+  --flame: #d8342f;
+  --gem: #2b7fb8;
+  --star: #a77b00;
+  --medal: #e6c229;
+  --footer-text: #17131f;
+}
+[data-look="yard"] .topbar { border-bottom: 3px solid var(--ink); }
+[data-look="yard"] .stat { border: 2px solid var(--ink); }
+[data-look="yard"] .bar { border: 2px solid var(--ink); }
+[data-look="yard"] .track-icon { border: 3px solid var(--ink); border-radius: 50%; }
+[data-look="yard"] .path .node { border: 3px solid var(--ink); }
+[data-look="yard"] .path .done .node { background: #2f7d1e; }
+[data-look="yard"] h1 { color: #17131f; }
+[data-look="yard"] .footer { font-weight: 700; }

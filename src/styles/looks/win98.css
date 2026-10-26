@@ -1,0 +1,108 @@
+/* Win98 + liquid glass, after qrer, Retrofind and Paint97: square bevels and a navy caption bar,
+   with glass on the chrome so the wallpaper behind it bends. Original CSS; no Microsoft artwork or fonts. */
+[data-look="win98"] {
+  --page-text: #fff;
+  --page-text-shadow: 1px 1px 0 #000;
+  --font-ui: Tahoma, Verdana, "Segoe UI", sans-serif;
+  --font-display: Tahoma, Verdana, sans-serif;
+  --bg: #008080;
+  --bg-image: url("/wallpapers/camp98.svg");
+  --surface: #c0c0c0;
+  --surface-2: #fff;
+  --text: #000;
+  --muted: #3a3a3a;
+  --border: #808080;
+  --accent: #000080;
+  --on-accent: #fff;
+  --link: #000080;
+  --ok: #006400;
+  --bad: #a00000;
+  --radius: 0;
+  --radius-sm: 0;
+  --shadow: none;
+  --bevel-out: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+  --bevel-in: inset -1px -1px #fff, inset 1px 1px #808080, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+  --win-border: 0;
+  --title-bg: linear-gradient(90deg, #000080, #0d5ea8);
+  --title-text: #fff;
+  --title-pad: 3px 3px 3px 6px;
+  --title-font: 700 0.82rem Tahoma, Verdana, sans-serif;
+  --title-case: none;
+  --title-spacing: 0;
+  --controls: flex;
+  --body-pad: 12px;
+  --btn-bg: #c0c0c0;
+  --btn-text: #000;
+  --btn-border: 0;
+  --btn-shadow: var(--bevel-out);
+  --btn-shadow-active: var(--bevel-in);
+  --btn-press: none;
+  --btn-font: 400 0.9rem Tahoma, Verdana, sans-serif;
+  --primary-bg: #c0c0c0;
+  --primary-border: 1px solid #000;
+  --field-bg: #fff;
+  --field-border: 0;
+  --field-shadow: var(--bevel-in);
+  --chip-bg: #c0c0c0;
+  --chip-text: #000;
+  --track-bg: #fff;
+  --bar-fill: repeating-linear-gradient(90deg, #000080 0 10px, transparent 10px 12px);
+  --bar: 16px;
+  --bar-shadow: var(--bevel-in);
+  --code-bg: #fff;
+  --code-text: #000;
+  --code-gutter: #555;
+  --tok-kw: #00008b;
+  --tok-str: #8b0000;
+  --tok-num: #6b007a;
+  --tok-com: #006400;
+  --tok-fn: #005a5a;
+  --tok-def: #000;
+  --selection: #b5d0ff;
+  --inline-code-bg: #fff;
+  --nav-active-bg: transparent;
+  --topbar-bg: rgba(192, 192, 192, 0.42);
+  --topbar-text: #000;
+  --footer-text: #fff;
+  --flame: #c00000;
+  --gem: #000080;
+  --star: #806000;
+  --focus: 0 0 0 1px #000, 0 0 0 2px #fff;
+}
+[data-look="win98"] .window { box-shadow: var(--bevel-out); padding: 3px; }
+[data-look="win98"] .titlebar .controls span { width: 16px; height: 14px; background: #c0c0c0; box-shadow: var(--bevel-out); display: grid; place-items: center; font: 700 9px/1 Tahoma, sans-serif; color: #000; }
+[data-look="win98"] .btn.primary { outline: 1px solid #000; outline-offset: -1px; font-weight: 700; color: #000; }
+[data-look="win98"] .btn.ok { background: #c0c0c0; color: #006400; font-weight: 700; }
+[data-look="win98"] .editor-host, [data-look="win98"] .console, [data-look="win98"] .lesson-text .window-body { box-shadow: var(--bevel-in); }
+[data-look="win98"] .console { background: #000; color: #c0c0c0; --code-text: #c0c0c0; }
+[data-look="win98"] .console .status { color: #9a9a9a; }
+[data-look="win98"] .lesson-text .window-body { background: #fff; margin: 2px; }
+[data-look="win98"] .prose pre { background: #fff; color: #000; box-shadow: var(--bevel-in); }
+[data-look="win98"] .nav a { box-shadow: var(--bevel-out); background: #c0c0c0; }
+[data-look="win98"] .nav a[aria-current="page"] { box-shadow: var(--bevel-in); background: #dcdcdc; }
+[data-look="win98"] .stat { border-radius: 0; box-shadow: var(--bevel-in); background: #c0c0c0; }
+[data-look="win98"] .pill { border-radius: 0; box-shadow: var(--bevel-out); }
+[data-look="win98"] .path .node { border-radius: 0; box-shadow: var(--bevel-out); border: 0; background: #c0c0c0; }
+[data-look="win98"] .path .done .node { background: #006400; }
+[data-look="win98"] .path .next .node { background: #000080; }
+[data-look="win98"] .path a:hover { background: #000080; color: #fff; border-color: transparent; }
+[data-look="win98"] .track-icon { border-radius: 0; box-shadow: var(--bevel-out); }
+[data-look="win98"] .result-banner { border-radius: 0; box-shadow: var(--bevel-in); border: 0; background: #fff; }
+[data-look="win98"] .look-card { border-radius: 0; border: 0; box-shadow: var(--bevel-out); background: #c0c0c0; }
+[data-look="win98"] .look-card[aria-pressed="true"] { box-shadow: var(--bevel-in); }
+[data-look="win98"] .toast { box-shadow: var(--bevel-out); padding: 10px 14px; }
+[data-look="win98"] .bubble { border-radius: 0; box-shadow: var(--bevel-in); background: #fff; }
+[data-look="win98"] .bubble.me { background: #ffffe1; }
+/* Liquid glass on the chrome: Chromium bends the wallpaper through an SVG displacement map;
+   other browsers get a frosted bar. */
+[data-look="win98"] .topbar {
+  border-bottom: 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.85), inset 0 -1px rgba(0, 0, 0, 0.35), 0 4px 18px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(3px) saturate(1.7);
+  backdrop-filter: blur(3px) saturate(1.7);
+}
+@supports (backdrop-filter: url(#x)) {
+  [data-look="win98"] .topbar { backdrop-filter: url(#ecc-glass) blur(1.5px) saturate(1.7); }
+}
+[data-look="win98"] .brand { text-shadow: 0 1px rgba(255, 255, 255, 0.7); }
+[data-look="win98"] .footer { text-shadow: 0 1px 2px #000; }

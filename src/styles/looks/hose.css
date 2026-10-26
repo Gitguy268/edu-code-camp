@@ -1,0 +1,79 @@
+/* Rubber hose, after rubber-hose-revue: a 1930s cartoon title card. Ink on paper, wobbly hand-drawn frames,
+   film grain and a gentle flicker that stops when reduced motion is on. */
+[data-look="hose"] {
+  --page-text: #ece8df;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: Georgia, "Times New Roman", serif;
+  --ink: #111;
+  --bg: #1a1a1a;
+  --bg-image: radial-gradient(ellipse at center, #3a3a3a 0, #141414 75%);
+  --surface: #dedad2;
+  --surface-2: #cdc8bd;
+  --text: var(--ink);
+  --muted: #3d3d3d;
+  --border: var(--ink);
+  --accent: #111;
+  --on-accent: #ece8df;
+  --link: #111;
+  --ok: #1f4d1f;
+  --bad: #6b1111;
+  --radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  --radius-sm: 125px 12px 115px 12px / 12px 115px 12px 125px;
+  --win-border: 3px solid var(--ink);
+  --shadow: 0 0 0 6px #dedad2, 0 0 0 9px var(--ink), 0 12px 30px rgba(0, 0, 0, 0.6);
+  --title-font: italic 700 1.05rem "Fraunces", Georgia, serif;
+  --title-case: none;
+  --title-spacing: 0.02em;
+  --title-pad: 14px 22px 0;
+  --body-pad: 16px 22px 20px;
+  --btn-font: 700 1rem "Fraunces", Georgia, serif;
+  --btn-bg: #dedad2;
+  --btn-border: 3px solid var(--ink);
+  --btn-shadow: 3px 3px 0 var(--ink);
+  --btn-shadow-active: none;
+  --btn-press: translate(3px, 3px);
+  --primary-bg: #111;
+  --primary-border: 3px solid #111;
+  --field-border: 2px solid var(--ink);
+  --chip-bg: #dedad2;
+  --chip-text: var(--ink);
+  --code-bg: #161616;
+  --code-text: #e7e3da;
+  --code-gutter: #9a968e;
+  --tok-kw: #ffffff;
+  --tok-str: #c9c5bc;
+  --tok-num: #e7e3da;
+  --tok-com: #8f8b84;
+  --tok-fn: #f5f2ea;
+  --tok-def: #e7e3da;
+  --track-bg: #b9b4a9;
+  --bar-fill: #111;
+  --topbar-bg: #dedad2;
+  --flame: #111;
+  --gem: #111;
+  --star: #111;
+  --medal: #e7e3da;
+  --footer-text: #cfcac0;
+  --ok-text: #111;
+  --bad-text: #111;
+}
+[data-look="hose"] .topbar { border-bottom: 4px double var(--ink); }
+[data-look="hose"] .window { margin: 9px; }
+[data-look="hose"] h1 { font-style: italic; letter-spacing: 0.01em; }
+[data-look="hose"] .stat { border: 2px solid var(--ink); }
+[data-look="hose"] .track-icon { border-radius: 50%; border: 3px solid var(--ink); background: #111; color: #ece8df; }
+[data-look="hose"] .path .node { border: 3px solid var(--ink); }
+[data-look="hose"] .path .done .node { background: #111; }
+[data-look="hose"] .badge.got .medal { border: 3px solid var(--ink); color: #111; }
+[data-look="hose"] #app { filter: grayscale(1); }
+[data-look="hose"] body::after {
+  content: ""; position: fixed; inset: -50%; pointer-events: none; z-index: 100; opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: hose-grain 0.42s steps(3) infinite;
+}
+[data-look="hose"] #app { animation: hose-flicker 4s steps(1) infinite; }
+@keyframes hose-grain { 33% { transform: translate(-3%, 2%); } 66% { transform: translate(2%, -3%); } }
+@keyframes hose-flicker { 0%, 100% { opacity: 1; } 41% { opacity: 0.94; } 43% { opacity: 1; } 77% { opacity: 0.97; } }
+@media (prefers-reduced-motion: reduce) {
+  [data-look="hose"] body::after, [data-look="hose"] #app { animation: none; }
+}

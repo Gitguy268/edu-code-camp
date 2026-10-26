@@ -1,0 +1,56 @@
+/* Liquid glass, after GlassPaint, pikado and liquidframe: frosted panels over colour fields. */
+[data-look="glass"] {
+  --font-ui: -apple-system, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+  --font-display: -apple-system, "SF Pro Display", system-ui, sans-serif;
+  --bg: #0f0f13;
+  --bg-image:
+    radial-gradient(circle at 12% 18%, rgba(10, 132, 255, 0.55), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(191, 90, 242, 0.5), transparent 30%),
+    radial-gradient(circle at 70% 85%, rgba(48, 209, 88, 0.35), transparent 32%),
+    radial-gradient(circle at 20% 90%, rgba(255, 159, 10, 0.32), transparent 30%);
+  --surface: rgba(30, 32, 42, 0.58);
+  --surface-2: rgba(255, 255, 255, 0.08);
+  --text: #f2f2f7;
+  --muted: #b4b4c0;
+  --border: rgba(255, 255, 255, 0.16);
+  --accent: #0a84ff;
+  --on-accent: #fff;
+  --link: #64b5ff;
+  --accent-strong: #64b5ff;
+  --ok: #30d158;
+  --bad: #ff6961;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35), inset 0 1px rgba(255, 255, 255, 0.18);
+  --title-text: #c7c7d1;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-text: #f2f2f7;
+  --btn-border: 1px solid rgba(255, 255, 255, 0.18);
+  --btn-radius: 999px;
+  --btn-shadow: inset 0 1px rgba(255, 255, 255, 0.25);
+  --primary-bg: linear-gradient(180deg, #2f97ff, #0a6fe0);
+  --field-bg: rgba(0, 0, 0, 0.25);
+  --chip-bg: rgba(255, 255, 255, 0.1);
+  --chip-text: #f2f2f7;
+  --code-bg: rgba(10, 10, 16, 0.72);
+  --topbar-bg: rgba(22, 22, 30, 0.45);
+  --track-bg: rgba(255, 255, 255, 0.12);
+  --bar-fill: linear-gradient(90deg, #0a84ff, #bf5af2);
+  --flame: #ff9f0a;
+  --gem: #64d2ff;
+  --star: #ffd60a;
+  --ok-text: #d8ffe2;
+  --bad-text: #ffe1df;
+  --medal: #ffd60a;
+}
+[data-look="glass"] .window, [data-look="glass"] .topbar, [data-look="glass"] .toast {
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  backdrop-filter: blur(26px) saturate(180%);
+}
+[data-look="glass"] .topbar { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+[data-look="glass"] .track-icon { background: linear-gradient(135deg, #0a84ff, #bf5af2); border-radius: 12px; }
+[data-look="glass"] .result-banner.pass { background: rgba(48, 209, 88, 0.16); }
+[data-look="glass"] .result-banner.fail { background: rgba(255, 105, 97, 0.16); }
+[data-look="glass"] .path .done .node { color: #04210d; }
+[data-look="glass"] .btn.ok { color: #04210d; }
+[data-look="glass"] .bubble.me { background: rgba(10, 132, 255, 0.3); }

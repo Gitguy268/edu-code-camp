@@ -1,0 +1,24 @@
+[
+  {
+    "name": "one row per cabin with its count",
+    "columns": [
+      "cabin",
+      "campers"
+    ],
+    "rows": [
+      [
+        "Birch",
+        2
+      ],
+      [
+        "Oak",
+        3
+      ],
+      [
+        "Pine",
+        3
+      ]
+    ],
+    "hint": "GROUP BY cabin and COUNT(*) AS campers"
+  }
+]

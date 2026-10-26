@@ -1,0 +1,12 @@
+node_modules/
+dist/
+public/alpine/
+public/vendor/pyodide/
+public/vendor/sql.js/
+public/fonts/
+test-results/
+.DS_Store
+.env
+.env.*
+!.env.example
+public/NOTICE.txt

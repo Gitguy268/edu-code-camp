@@ -1,0 +1,74 @@
+edu-code-camp
+Copyright (c) 2026 Lucas Van De Weerd. Licensed under the MIT License (see LICENSE).
+
+The MIT grant covers edu-code-camp's own code, lessons, artwork and wallpaper only.
+The app bundles, adapts or downloads the third-party software below, each under its
+own licence. edu-code-camp is not affiliated with or endorsed by any of these
+projects, nor by freeCodeCamp, boot.dev or Microsoft.
+
+
+Ideas, no code
+- freeCodeCamp (https://github.com/freeCodeCamp/freeCodeCamp). Its software is
+  BSD-3-Clause; its lessons in /curriculum are copyright freeCodeCamp.org, all
+  rights reserved. No code and no lessons were copied. Ideas used: a free,
+  open-source curriculum of short lessons, each checked by hidden tests that run
+  in the browser.
+- boot.dev (https://www.boot.dev), proprietary. No code or content was copied.
+  Ideas used: XP and levels, daily streaks, gems, chests, achievements, daily
+  quests, a leaderboard, guided multi-step projects, command-line lessons, and an
+  AI tutor that gives Socratic hints instead of answers.
+- The Win98 look is original CSS and SVG. It uses no Microsoft artwork or fonts;
+  it falls back to the system's Tahoma or Verdana.
+
+
+Bundled in the web app
+- CodeMirror 6 (codemirror 6.0.2, @codemirror/*, @lezer/*), Copyright (c) 2018-2021
+  Marijn Haverbeke and others. MIT License. https://codemirror.net
+- marked 18.1.1, Copyright (c) 2018+ MarkedJS, (c) 2011-2018 Christopher Jeffrey.
+  MIT License. https://github.com/markedjs/marked
+- sql.js 1.15.1, Copyright (c) 2017 sql.js authors. MIT License.
+  https://github.com/sql-js/sql.js. It contains SQLite, which is in the public domain.
+- Pyodide 314.0.7 (public/vendor/pyodide, copied unmodified from the npm package by
+  scripts/vendor.mjs). Mozilla Public License 2.0. Source:
+  https://github.com/pyodide/pyodide. It contains CPython and its standard library
+  (python_stdlib.zip), Python Software Foundation License.
+- v86 0.5.463 (libv86, v86.wasm), Copyright (c) 2012, The v86 contributors.
+  BSD 2-Clause License. https://github.com/copy/v86
+- SeaBIOS (public/bios/seabios.bin, vgabios.bin), from the v86 repository.
+  GNU LGPL v3, see public/bios/COPYING.LESSER. Source: https://www.seabios.org
+- xterm.js 6.0.0 (@xterm/xterm, @xterm/addon-fit), Copyright (c) 2017-2019 The
+  xterm.js authors. MIT License. https://github.com/xtermjs/xterm.js
+- wllama 3.11.0, built from 1a5687ef7c on master (public/vendor/wllama), Copyright
+  (c) 2024 Xuan Son NGUYEN. MIT License. https://github.com/ngxson/wllama.
+  It contains llama.cpp, Copyright (c) 2023-2026 The ggml authors, MIT License.
+
+Fonts (SIL Open Font License 1.1; texts in public/fonts/OFL-*.txt, from @fontsource)
+- Press Start 2P, Copyright 2012 The Press Start 2P Project Authors.
+- Lilita One, Copyright (c) 2011 Juan Montoreano.
+- Atkinson Hyperlegible Next, Copyright 2020-2024 The Atkinson Hyperlegible Next
+  Project Authors.
+- Fraunces, Copyright 2020 The Fraunces Project Authors.
+- JetBrains Mono, Copyright 2020 The JetBrains Mono Project Authors.
+
+Adapted from the author's own MIT projects
+- src/vm/vm.js from TabShell's src/vm.js; image/Dockerfile and scripts/build-image.sh
+  from TabShell's image build.
+- src/tutor/runtime.js from Paint97's (win97-excalidraw) src/lib/localAi/runtime.ts.
+
+Adapted from v86 (BSD 2-Clause, Copyright (c) 2012, The v86 contributors)
+- scripts/fs2json.py and scripts/copy-to-sha256.py, copied unchanged from v86's tools/.
+- image/Dockerfile, based on v86's tools/docker/alpine/Dockerfile.
+
+Built into the Linux lessons' VM image (public/alpine/, built by scripts/build-image.sh,
+not in this repository)
+- Alpine Linux 3.21 packages listed in image/Dockerfile, including the Linux kernel,
+  BusyBox, OpenRC, nano, less, tree and file, each under its own licence (GPL-2.0 for
+  the kernel and BusyBox, GPL-3.0 for nano). Sources for every package:
+  https://gitlab.alpinelinux.org/alpine/aports and the mirrors at
+  https://dl-cdn.alpinelinux.org/alpine/v3.21/
+
+Downloaded on request, not redistributed
+- Spot the tutor runs MiniCPM-V 4.7 1B (MiniCPM-V-4_7-1B-Q4_K_M.gguf) by OpenBMB,
+  Apache License 2.0, fetched from https://huggingface.co/openbmb/MiniCPM-V-4.7-1B-gguf
+  at revision 9684c734cfb2e6aaccb0bb52ba58afa9aae92d90 when a learner presses
+  "Download Spot". The model is outside the MIT grant.

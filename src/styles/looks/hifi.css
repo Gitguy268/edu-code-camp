@@ -1,0 +1,73 @@
+/* Hi-fi deck, after Vinyl-Player and the iPod classic: brushed metal panels, engraved labels,
+   rubber buttons and an orange accent on a dark plinth. */
+[data-look="hifi"] {
+  --page-text: #f2efe9;
+  --font-ui: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bg: #1a1a1e;
+  --bg-image: radial-gradient(ellipse at 50% 0, #34343a 0, #1a1a1e 60%);
+  --metal: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 40%),
+    repeating-linear-gradient(90deg, #dcdad6 0 2px, #d2d0cc 2px 3px, #e0deda 3px 5px);
+  --surface: #dad8d4;
+  --surface-2: #efeeeb;
+  --text: #1b1b1d;
+  --muted: #4c4c52;
+  --border: #9c9a96;
+  --accent: #c2410c;
+  --on-accent: #fff;
+  --link: #a3360a;
+  --accent-strong: #c2410c;
+  --ok: #1d7a3a;
+  --bad: #b3261e;
+  --radius: 14px;
+  --radius-sm: 9px;
+  --win-border: 1px solid #8e8c88;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 0 rgba(0, 0, 0, 0.18) inset, 0 14px 30px rgba(0, 0, 0, 0.5);
+  --title-text: #55555b;
+  --title-font: 700 0.7rem "Helvetica Neue", Helvetica, sans-serif;
+  --title-spacing: 0.18em;
+  --btn-bg: linear-gradient(180deg, #fbfbfa, #d6d4d0);
+  --btn-text: #1b1b1d;
+  --btn-border: 1px solid #8e8c88;
+  --btn-radius: 10px;
+  --btn-shadow: 0 1px 0 #fff inset, 0 2px 3px rgba(0, 0, 0, 0.3);
+  --btn-shadow-active: 0 2px 4px rgba(0, 0, 0, 0.35) inset;
+  --btn-case: uppercase;
+  --btn-spacing: 0.06em;
+  --btn-font: 700 0.78rem "Helvetica Neue", Helvetica, sans-serif;
+  --primary-bg: linear-gradient(180deg, #e8562a, #b83c0b);
+  --primary-border: 1px solid #7d2a07;
+  --field-bg: #f7f6f4;
+  --field-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+  --chip-bg: #121214;
+  --chip-text: #f2efe9;
+  --code-bg: #121214;
+  --code-text: #ece9e4;
+  --tok-kw: #ff8a5c;
+  --tok-str: #f2c879;
+  --tok-num: #8fd3ff;
+  --tok-com: #8d8a85;
+  --tok-fn: #a8e6a1;
+  --track-bg: #121214;
+  --bar-fill: linear-gradient(90deg, #e8562a, #ffb36b);
+  --bar-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) inset;
+  --bar: 8px;
+  --topbar-bg: #121214;
+  --topbar-text: #f2efe9;
+  --nav-active-bg: #e8562a;
+  --nav-active-text: #121214;
+  --flame: #ff8a5c;
+  --gem: #8fd3ff;
+  --star: #f2c879;
+  --footer-text: #a9a6a0;
+}
+[data-look="hifi"] .window { background: var(--metal); }
+[data-look="hifi"] .titlebar { padding-top: 12px; }
+[data-look="hifi"] .titlebar::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #39d353; box-shadow: 0 0 6px #39d353, 0 0 0 1px #0d5a1f; }
+[data-look="hifi"] .topbar { border-bottom: 1px solid #000; box-shadow: 0 1px 0 #333; }
+[data-look="hifi"] .stat { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12); font-family: "JetBrains Mono", monospace; }
+[data-look="hifi"] .track-icon { border-radius: 50%; background: radial-gradient(circle, #e8562a 0 18%, #111 19% 100%); color: transparent; box-shadow: 0 0 0 2px #333, 0 3px 6px rgba(0, 0, 0, 0.5); }
+[data-look="hifi"] .path .node { background: radial-gradient(circle at 35% 30%, #fff, #c9c7c3); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+[data-look="hifi"] .path .done .node { background: radial-gradient(circle at 35% 30%, #4ccf72, #1d7a3a); }
+[data-look="hifi"] .path .next .node { background: radial-gradient(circle at 35% 30%, #ff8a5c, #c2410c); }
+[data-look="hifi"] .look-card { background: var(--metal); }

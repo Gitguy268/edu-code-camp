@@ -1,0 +1,11 @@
+#!/bin/sh
+# Runs lesson setup and check scripts sent by the page over ttyS0 (see src/vm/vm.js).
+exec </dev/ttyS0 >/dev/ttyS0 2>&1
+stty raw -echo
+printf '@@CAMP-READY@@\n'
+while IFS= read -r line; do
+  printf '%s' "$line" | base64 -d > /tmp/.camp-check.sh 2>/dev/null
+  out=$(cd /home/camper && sh /tmp/.camp-check.sh 2>&1 | base64 | tr -d '\n')
+  rm -f /tmp/.camp-check.sh
+  printf '%s\n@@CAMP-END@@\n' "$out"
+done

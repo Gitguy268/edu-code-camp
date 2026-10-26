@@ -1,0 +1,82 @@
+/* 8-bit arcade, after 8bit-player and cozy-christmas-lab: pixel headings, hard pixel borders, scanlines. */
+[data-look="arcade"] {
+  --page-text: #ffcc00;
+  --font-display: "Press Start 2P", ui-monospace, monospace;
+  --font-ui: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --bg: #0f0f1b;
+  --bg-image: linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+  --bg-size: 24px 24px;
+  --surface: #1a1a2e;
+  --surface-2: #24243e;
+  --text: #f4f4ff;
+  --muted: #b8b8d8;
+  --border: #4a4a7a;
+  --accent: #d6003a;
+  --on-accent: #fff;
+  --link: #00e5ff;
+  --accent-strong: #ffcc00;
+  --ok: #00ff85;
+  --bad: #ff5c7a;
+  --radius: 0;
+  --radius-sm: 0;
+  --px: 4px;
+  --shadow: 0 0 0 var(--px) #000, var(--px) var(--px) 0 var(--px) #000;
+  --win-border: var(--px) solid #00e5ff;
+  --title-font: 400 0.7rem "Press Start 2P", monospace;
+  --title-text: #00e5ff;
+  --title-case: uppercase;
+  --title-pad: 12px 14px 4px;
+  --btn-font: 400 0.68rem/1.4 "Press Start 2P", monospace;
+  --btn-pad: 10px 14px;
+  --btn-bg: #24243e;
+  --btn-text: #fff;
+  --btn-border: var(--px) solid #fff;
+  --btn-shadow: var(--px) var(--px) 0 #000;
+  --btn-shadow-active: none;
+  --btn-press: translate(var(--px), var(--px));
+  --primary-bg: #d6003a;
+  --primary-border: var(--px) solid #fff;
+  --field-bg: #0f0f1b;
+  --chip-bg: #0f0f1b;
+  --chip-text: #ffcc00;
+  --code-bg: #0b0b14;
+  --code-text: #e8e8ff;
+  --tok-kw: #ff6b9a;
+  --tok-str: #ffcc00;
+  --tok-num: #00e5ff;
+  --tok-com: #8a8ab0;
+  --tok-fn: #00ff85;
+  --track-bg: #0b0b14;
+  --bar: 14px;
+  --bar-fill: repeating-linear-gradient(90deg, #00ff85 0 10px, #00c968 10px 14px);
+  --flame: #ff8800;
+  --gem: #00e5ff;
+  --star: #ffcc00;
+  --medal: #ffcc00;
+  --ok-text: #d8ffe9;
+  --bad-text: #ffe0e7;
+}
+[data-look="arcade"] h1, [data-look="arcade"] h2, [data-look="arcade"] h3 { line-height: 1.5; letter-spacing: 0.02em; }
+[data-look="arcade"] h1 { font-size: clamp(1rem, 2.4vw, 1.4rem); color: #ffcc00; text-shadow: 3px 3px 0 #ff0044; }
+[data-look="arcade"] h2 { font-size: 0.85rem; }
+[data-look="arcade"] h3 { font-size: 0.75rem; }
+[data-look="arcade"] .prose h1 { font-size: 1.1rem; }
+[data-look="arcade"] .brand { font-size: 0.7rem; color: #ffcc00; }
+[data-look="arcade"] .topbar { border-bottom: var(--px) solid #ff0044; background: #0f0f1b; }
+[data-look="arcade"] .nav a { font: 400 0.6rem "Press Start 2P", monospace; padding: 8px; }
+[data-look="arcade"] .nav a[aria-current="page"] { background: #d6003a; color: #fff; }
+[data-look="arcade"] .stat { border-radius: 0; font: 400 0.62rem "Press Start 2P", monospace; border: 2px solid #ffcc00; }
+[data-look="arcade"] .pill { border-radius: 0; }
+[data-look="arcade"] .window { margin: var(--px); }
+[data-look="arcade"] .bar { border-radius: 0; outline: 2px solid #fff; }
+[data-look="arcade"] .bar > span { border-radius: 0; }
+[data-look="arcade"] .path .node { border-radius: 0; font-family: "Press Start 2P", monospace; font-size: 0.7rem; }
+[data-look="arcade"] .path .done .node, [data-look="arcade"] .btn.ok { color: #002611; }
+[data-look="arcade"] .track-icon { border: 2px solid #fff; }
+[data-look="arcade"] .badge .medal, [data-look="arcade"] .avatar { border-radius: 0; }
+[data-look="arcade"] .celebrate .big { font-size: 1.4rem; color: #ffcc00; text-shadow: 3px 3px 0 #ff0044; }
+[data-look="arcade"] img, [data-look="arcade"] .mascot { image-rendering: pixelated; }
+[data-look="arcade"] body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 4px);
+}

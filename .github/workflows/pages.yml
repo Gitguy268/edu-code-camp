@@ -1,0 +1,78 @@
+name: Check, build and deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+# Never cancel a run halfway through a deploy.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - run: npm ci
+
+      # Saved VMs only restore on the image they were saved from, so reuse the built image
+      # until its sources change rather than rebuilding (and resetting everyone) on every push.
+      - name: Restore the Alpine VM image
+        id: image
+        uses: actions/cache@v6
+        with:
+          path: public/alpine
+          key: alpine-${{ hashFiles('image/**', 'scripts/build-image.sh', 'scripts/*.py') }}
+
+      - name: Build the Alpine VM image
+        if: steps.image.outputs.cache-hit != 'true'
+        run: ./scripts/build-image.sh
+
+      - name: Lint, build and self-check every lesson
+        run: npm run check
+
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Browser tests
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test
+
+      - name: Check links in the docs
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress README.md CONTRIBUTING.md content/README.md
+          fail: true
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
