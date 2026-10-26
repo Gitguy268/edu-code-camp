@@ -1,6 +1,8 @@
 // Offline support. Scoped to the app's own folder, so it never answers for other apps on the same host.
 // Pages and the app's code: network first (so updates arrive), cache as the fallback.
-// Big runtimes (Pyodide, sql.js, wllama, the Linux image, fonts): cache first, they never change in place.
+// Big runtimes (Pyodide, sql.js, wllama, the Linux image's files, fonts): cache first within one build.
+// The image's index, alpine/fs.json, is network first: it changes whenever the image is rebuilt.
+// The build replaces this name with one that changes whenever the app does (see vite.config.js).
 const CACHE = "edu-code-camp-v1";
 const SCOPE = new URL(self.registration.scope).pathname;
 const IMMUTABLE = /\/(vendor|alpine|fonts|bios|wallpapers)\//;
@@ -21,7 +23,7 @@ self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin || !url.pathname.startsWith(SCOPE)) return;
   if (e.request.headers.has("range")) return;
-  if (IMMUTABLE.test(url.pathname)) {
+  if (IMMUTABLE.test(url.pathname) && !url.pathname.endsWith("/fs.json")) {
     e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(res => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
       return res;

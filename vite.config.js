@@ -19,6 +19,11 @@ function precacheList() {
         .map(f => relative(dir, join(f.parentPath, f.name)).split("\\").join("/"))
         .filter(f => !skip.test(f) && !f.endsWith(".map"));
       writeFileSync(join(dir, "precache.json"), JSON.stringify(files));
+      // A new cache name for every build that changes anything, so the worker reinstalls and refreshes.
+      const hash = createHash("sha256").update(imageId);
+      for (const f of files.sort()) hash.update(f).update(readFileSync(join(dir, f)));
+      const sw = join(dir, "sw.js");
+      writeFileSync(sw, readFileSync(sw, "utf8").replace('"edu-code-camp-v1"', `"edu-code-camp-v${hash.digest("hex").slice(0, 12)}"`));
     },
   };
 }

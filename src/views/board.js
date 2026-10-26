@@ -9,7 +9,7 @@ export default function board(main) {
   const rows = [...allProfiles()].sort((a, b) => (b.weekly[wk] ?? 0) - (a.weekly[wk] ?? 0) || b.xp - a.xp);
   main.replaceChildren(win("Leaderboard",
     h("p.muted", "Campers on this device, ranked by XP earned this week. Add more campers in Settings."),
-    h("table.board",
+    h("div.table-wrap", h("table.board",
       h("thead", h("tr", ["#", "Camper", "This week", "Total XP", "Level", "Streak"].map(t => h("th", { scope: "col" }, t)))),
       h("tbody", rows.map((p, i) => h(`tr${p.id === me.id ? ".me" : ""}`,
         h("td", String(i + 1)),
@@ -17,5 +17,5 @@ export default function board(main) {
         h("td", `${p.weekly[wk] ?? 0} XP`),
         h("td", String(p.xp)),
         h("td", String(levelInfo(p.xp).level)),
-        h("td", `${currentStreak(p)} days`)))))));
+        h("td", `${currentStreak(p)} days`))))))));
 }

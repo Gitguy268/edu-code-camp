@@ -58,7 +58,8 @@
   --bad-text: #111;
 }
 [data-look="hose"] .topbar { border-bottom: 4px double var(--ink); }
-[data-look="hose"] .window { margin: 9px; }
+[data-look="hose"] .window { margin: 9px 0; }
+[data-look="hose"] main { padding-inline: 26px; }
 [data-look="hose"] h1 { font-style: italic; letter-spacing: 0.01em; }
 [data-look="hose"] .stat { border: 2px solid var(--ink); }
 [data-look="hose"] .track-icon { border-radius: 50%; border: 3px solid var(--ink); background: #111; color: #ece8df; }
