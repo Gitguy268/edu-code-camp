@@ -48,7 +48,7 @@ set +e
 ${PRELUDE}
 echo "--before--"
 ( ${tests} )
-su camper -s /bin/sh -c 'cd /home/camper && sh /dev/stdin' <<'CAMPER_EOF'
+su camper -s /bin/sh -c 'cd /home/camper && sh' <<'CAMPER_EOF'
 ${solution}
 CAMPER_EOF
 echo "--after--"
