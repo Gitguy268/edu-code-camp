@@ -54,7 +54,7 @@ CAMPER_EOF
 echo "--after--"
 ( ${tests} )`;
   const out = docker
-    ? execFileSync("docker", ["run", "--rm", "-i", "docker.io/i386/alpine:3.21.0", "sh"], { input: script, encoding: "utf8" })
+    ? execFileSync("docker", ["run", "--rm", "docker.io/i386/alpine:3.21.0", "sh", "-c", script], { encoding: "utf8" })
     : execFileSync("sh", [], { input: localScript(setup, solution, tests), encoding: "utf8" });
   const [before, after] = out.split("--before--")[1].split("--after--");
   const parse = s => s.split("\n").filter(l => /^(PASS|FAIL)\t/.test(l));
