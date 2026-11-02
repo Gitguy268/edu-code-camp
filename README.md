@@ -19,6 +19,10 @@ edu-code-camp is a free learning app in the spirit of boot.dev and freeCodeCamp.
 
 ![A JavaScript lesson: a failing submit, the fix, and the lesson-complete window](docs/images/demo.gif)
 
+<!-- live-links -->
+**Live:** [gitguy268.github.io/edu-code-camp](https://gitguy268.github.io/edu-code-camp/)
+<!-- /live-links -->
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 
