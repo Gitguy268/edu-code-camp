@@ -35,7 +35,7 @@
     "codemirror": "6.0.2",
     "marked": "18.1.1",
     "pyodide": "314.0.7",
-    "sql.js": "1.15.1",
+    "sql.js": "1.15.2",
     "v86": "0.5.463"
   },
   "devDependencies": {
