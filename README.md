@@ -19,6 +19,36 @@ edu-code-camp is a free learning app in the spirit of boot.dev and freeCodeCamp.
 
 ![A JavaScript lesson: a failing submit, the fix, and the lesson-complete window](docs/images/demo.gif)
 
+<!-- run-steps:start -->
+## Run it locally, step by step
+
+1. **Install [Node.js](https://nodejs.org) 20** or newer.
+
+2. **Get the code:**
+
+   ```sh
+   git clone https://github.com/Gitguy268/edu-code-camp.git
+   cd edu-code-camp
+   ```
+
+3. **Install and build:**
+
+   ```sh
+   npm ci
+   npm run build
+   ```
+
+   On a Mac you can double-click `start.command` instead of these steps.
+
+4. **Start it:**
+
+   ```sh
+   npx vite preview
+   ```
+
+5. **Open <http://localhost:5281/>** in your browser. Press `Ctrl+C` to stop.
+<!-- run-steps:end -->
+
 ## What's inside
 
 | Track | Lessons | Runs on |
