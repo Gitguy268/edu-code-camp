@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "selfcheck": "node scripts/selfcheck.mjs",
     "check": "npm run lint && npm run build && npm run selfcheck",
-    "test:unit": "node --test tests/unit/",
+    "test:unit": "node --test tests/unit/*.test.js",
     "test:e2e": "playwright test",
     "test": "npm run test:unit && npm run test:e2e",
     "screenshots": "node scripts/screenshots.mjs"
