@@ -96,10 +96,14 @@ export function questsFor(p, today = dayKey()) {
   if (p.quests.day !== today) {
     const pool = [...QUESTS];
     const list = [];
+    const stats = new Set();
     let h = hash(p.id + today);
     while (list.length < 3) {
       const [q] = pool.splice(h % pool.length, 1);
-      if (!list.some(x => x.stat === q.stat)) list.push({ id: q.id, progress: 0, done: false });
+      if (!stats.has(q.stat)) {
+        stats.add(q.stat);
+        list.push({ id: q.id, progress: 0, done: false });
+      }
       h = hash(String(h));
     }
     p.quests = { day: today, list };
