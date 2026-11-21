@@ -85,6 +85,11 @@ test("three different daily quests, the same all day", () => {
   assert.equal(a.length, 3);
   assert.equal(new Set(questsFor(p, "2026-10-20").map(q => q.stat)).size, 3);
   assert.deepEqual(questsFor(p, "2026-10-20").map(q => q.id), a);
+  // Profile ids are random, so try many: no day may hold two quests of one kind.
+  for (let i = 0; i < 200; i++) {
+    const stats = questsFor(newProfile("Ada"), "2026-10-20").map(q => q.stat);
+    assert.equal(new Set(stats).size, 3, stats.join(", "));
+  }
 });
 
 test("looks tried are counted once each", () => {
